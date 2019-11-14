@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cliui": "^5.0.0",
+    "lighthouse-logger": "^1.2.0",
+    "yargs": "^14.2.0"
+  }
+}
