@@ -1,4 +1,7 @@
-const log = require('lighthouse-logger')
+const chalk = require('chalk')
+
+// Set manually to make sure chalk colors in gh-actions.
+chalk.level = 3;
 
 function pwaRow(ui, icon, lhr, groupId) {
   const audits = lhr.categories['pwa'].auditRefs.filter(audit => audit.group === groupId).map(audit => audit.id)
@@ -8,9 +11,9 @@ function pwaRow(ui, icon, lhr, groupId) {
       pass = false
     }
   })
-  let colorFunc = function (str) {return log.redify(str)}
+  let colorFunc = chalk.red
   if (pass) {
-    colorFunc = function (str) { return log.greenify(str)}
+    colorFunc = chalk.green
   }
   ui.div(
     {

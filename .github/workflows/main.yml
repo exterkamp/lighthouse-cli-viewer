@@ -14,4 +14,4 @@ jobs:
           npm install
       - name: Demo
         run: |
-          node cli.js --lhr=.github/reports/exterkamp_dot_codes.json
+          node cli.js --lhr=.github/reports/exterkamp_dot_codes.json lhr=.github/reports/apple_dot_com.json lhr=.github/reports/cnn_dot_com.json

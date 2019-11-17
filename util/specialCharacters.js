@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 
+// Set manually to make sure chalk colors in gh-actions.
 chalk.level = 3;
 
 function getScoreCharacter(score) {

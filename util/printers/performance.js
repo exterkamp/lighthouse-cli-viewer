@@ -1,4 +1,3 @@
-const ui = require('cliui')()
 const specialCharacters = require('../specialCharacters')
 
 function printCategory(lhr, ui) {

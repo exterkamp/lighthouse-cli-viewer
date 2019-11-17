@@ -1,18 +1,19 @@
 const ui = require('cliui')()
-const log = require('lighthouse-logger')
+const chalk = require('chalk');
 const specialCharacters = require('./specialCharacters');
+
+// Set manually to make sure chalk colors in gh-actions.
+chalk.level = 3;
 
 function logSummary(lhr) {
   console.log(lhr.finalUrl)
   for (const key in lhr.categories) {
     const category = lhr.categories[key]
-    let scoreFunc = log.redify
+    let scoreFunc = chalk.red
     if (category.score >= 0.9) {
-      scoreFunc = log.greenify
+      scoreFunc = chalk.green
     } else if (category.score >= 0.5) {
-      scoreFunc = function (/** @type {string} */str) {
-        return `${log.yellow}${str}${log.reset}`
-      }
+      scoreFunc = chalk.yellow
     }
     
     // Print out the generic header.
