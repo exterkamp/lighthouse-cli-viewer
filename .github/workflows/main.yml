@@ -9,7 +9,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - name: Install and Test
+      - name: Install
         run: |
           npm install
-          npm test
+      - name: Demo
+        run: |
+          node cli.js --lhr=.github/reports/exterkamp_dot_codes.json
