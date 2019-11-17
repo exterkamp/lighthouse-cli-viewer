@@ -1,12 +1,12 @@
-const log = require('lighthouse-logger')
+const chalk = require('chalk');
 
 function getScoreCharacter(score) {
   if (score >= 0.9) {
-    return `${log.greenify('●')}`
+    return `${chalk.green('●')}`
   } else if (score >= 0.5) {
-    return `${log.yellow}■${log.reset}`
+    return `${chalk.yellow('■')}`
   }
-  return `${log.redify('▲')}`
+  return `${chalk.red('▲')}`
 }
 
 function getGauge(score) {
@@ -23,11 +23,11 @@ function getGauge(score) {
 
 function colorScore(score, displayValue) {
   if (score >= 0.9) {
-    return `${log.greenify(displayValue)}`
+    return `${chalk.green(displayValue)}`
   } else if (score >= 0.5) {
-    return `${log.yellow}${displayValue}${log.reset}`
+    return `${chalk.yellow(displayValue)}`
   }
-  return `${log.redify(displayValue)}`
+  return `${chalk.red(displayValue)}`
 }
 
 module.exports = {getScoreCharacter, getGauge, colorScore}
