@@ -4,12 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - name: Use node 10
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - name: Install
-        run: npm install
-      - name: Run CLI
-        run: node cli.js --lhr='../.github/reports/exterkamp_dot_codes.json'
+      - name: Install and Test
+        run: |
+          npm install
+          npm test

@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "node cli.js --lhr=.github/reports/exterkamp_dot_codes.json" 
+  },
   "dependencies": {
     "chalk": "^3.0.0",
     "cliui": "^5.0.0",
