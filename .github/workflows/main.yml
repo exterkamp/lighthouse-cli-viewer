@@ -12,5 +12,5 @@ jobs:
       - name: Install
         run: npm install
       - name: Run CLI
-        uses: ./
+        working-directory: ./
         run: node cli.js --lhr='.github/reports/exterkamp_dot_codes.json'
