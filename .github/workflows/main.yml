@@ -14,5 +14,4 @@ jobs:
           npm install
       - name: Demo
         run: |
-          echo "::set-env name=FORCE_COLOR::3"
           node cli.js --lhr=.github/reports/exterkamp_dot_codes.json

@@ -1,5 +1,7 @@
 const chalk = require('chalk');
 
+chalk.level = 3;
+
 function getScoreCharacter(score) {
   if (score >= 0.9) {
     return `${chalk.green('●')}`
