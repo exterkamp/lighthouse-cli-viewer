@@ -12,4 +12,4 @@ jobs:
       - name: Install
         run: npm install
       - name: Run CLI
-        run: node cli.js --lhr='$PATH/.github/reports/exterkamp_dot_codes.json'
+        run: node cli.js --lhr='../.github/reports/exterkamp_dot_codes.json'
